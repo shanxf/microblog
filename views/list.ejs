@@ -1,0 +1,8 @@
+使用partial函数，效果：（新版本需要单独引入）partial包
+<ul><%- partial('listitem', items) %></ul>
+
+-----------------------
+使用include,效果（），不需引入partial包
+<% items.forEach(function(listitem){ %>
+<% include listitem %>
+<% }) %>

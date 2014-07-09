@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= title %></title>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<%if(!locals.user){%>
+	<div class="hero-unit">
+		<h1>欢迎来到 Microblog</h1>
+		<p>Microblog 是一个基于 Node.js 的微博系统。</p>
+		<p>
+			<a class="btn btn-primary btn-large" href="/login">登录</a>
+			<a class="btn btn-large" href="/reg">立即注册</a>
+		</p>
+	</div>
+<%} else {%>
+  <!-- partial('say')-->
+	<% include say %>  
+<%}%>
+<% include posts %>
+<!--- partial('posts') 这个报错，用上边的代替-->
+</body>
+</html>
